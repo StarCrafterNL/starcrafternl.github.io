@@ -1,0 +1,32 @@
+.container-achtergrond {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+  background-image: url('/images/achtergrond.jpeg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.achtergrond-tekst {
+  position: relative;
+  top: 60%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 20%;
+}
+
+.foto-container {
+  position: relative;
+  top: -30%;
+  left: 80%;
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}

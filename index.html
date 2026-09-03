@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styling/style.css">
+    <link rel="stylesheet" href="/styling/index.css">
 <title>Vigo Wentink</title>
 </head>
 <body>
 <header>
-    <nav class="navbar" id="navbar">
+    <nav class="topnav" id="topnav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="overmij.html">Over mij</a></li>
@@ -15,17 +16,28 @@
         </ul>
     </nav>
 
-    <section class="sectionh1" id="welkom_section">
-        <h1>Welkom op mijn website</h1>
-        <p>Hier vindt u informatie over mij en mijn studie.</p>
-    </section>
+<div class="container-achtergrond">
+    <div class="achtergrond-tekst"><h1>Welkom op mijn website</h1><p>Hier vindt u informatie over Vigo Wentink </p>
+        <p>op deze website staat informatie over mijn, mijn portfolio en mijn blog.</p> 
+    </div>
+    <div class="foto-container">
+        <img src="/images/Vigo Wentink.jpeg" alt="Mijn foto" class="mijn-foto" width="150" height="200"><!--vervang foto door een betere foto van jezelf-->
+
+    </div>
+</div>
+
 </header>
+</body>
 
 <main>
+<body>
 <h2>Over mij</h2>
 <p>Mijn naam is Vigo Wentink, ik ben 23 jaar oud, ik woon in Den Haag en ik studeer aan de Haagsche Hogeschool.</p>
+<p> benieuwd wie ik ben druk op onderstaande knop voor meer informatie.</p>
+<button class="button" onclick="window.location.href='overmij.html'">Over mij</button>
 </main>
-</body>
+
+
 
 <section class="sectionh2" id="sociale_media_section">
 <h2>Sociale media</h2>
@@ -34,6 +46,6 @@
 <a href="https://www.instagram.com/vigo_wentink/">Instagram</a>
 <a href="https://x.com/vigowentink?s=11&t=1pwHImI7WQeTVepbs_tzJQ">X</a>
 </section>
-</body>
+
 
 </html>

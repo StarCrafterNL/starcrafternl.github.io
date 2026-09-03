@@ -1,0 +1,36 @@
+/* Plaats de foto aan de zijkant van de 'Over mij'-inhoud. */
+.over-mij {
+	display: flex;
+	align-items: flex-start;
+	gap: 0;
+}
+
+.over-mij img,
+.mijn-foto {
+	width: 220px;
+	max-width: 35%;
+	height: -100px;
+	margin-left: 85%;
+	object-fit: cover;
+}
+
+@media (max-width: 700px) {
+	.over-mij {
+		flex-direction: column;
+	}
+
+	.over-mij img,
+	.mijn-foto {
+		max-width: 100%;
+		margin-left: 0;
+	}
+}
+.profiel-foto {
+  display: flex;
+  justify-content: center;
+  margin-top: 0%;
+}
+p{
+    font-size: 20px;
+    max-width: 70%;
+}
