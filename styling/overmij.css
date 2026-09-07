@@ -53,3 +53,8 @@ p{
     line-height: 1.6;
     margin: 0;
 }
+.studie {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
