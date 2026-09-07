@@ -34,3 +34,22 @@ p{
     font-size: 20px;
     max-width: 70%;
 }
+
+.HHS, .Hogeschool-Leiden, .AH, .Autstede {
+    display: flex;
+    align-items: center;       /* Lijnt tekst en afbeelding verticaal in het midden uit */
+    justify-content: space-between;
+    gap: 30px;                 /* Ruimte tussen de tekst en de afbeelding */
+    margin-bottom: 30px;
+}
+
+/* De tekst krijgt alle beschikbare ruimte links */
+.HHS .tekst, .Hogeschool-Leiden .tekst, .AH .tekst, .Autstede .tekst {
+    flex: 1;
+}
+
+.HHS p, .Hogeschool-Leiden p, .AH p, .Autstede p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
