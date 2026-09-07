@@ -58,3 +58,9 @@ p{
 	justify-content: center;
 	margin-top: 20px;
 }
+.vrijwilligerswerk {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
