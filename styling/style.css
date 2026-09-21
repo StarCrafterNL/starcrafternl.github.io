@@ -1,21 +1,7 @@
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #0d0636;
   overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
 }
 
 /* Change the color of links on hover */
@@ -41,6 +27,8 @@ nav li {
 }
 
 body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -59,4 +47,43 @@ main {
   text-align: center;
   color: #fff;
   background-color: #0d0636;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 48px;
+  margin: 0 20px;
+}
+
+@media only screen and (max-width: 480px) { /* voor mobiele apparaten max 480px */
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) { /* voor tablets minimum 481px max 1024px */
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1025px) { /* voor desktops minimum 1024px */
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
 }

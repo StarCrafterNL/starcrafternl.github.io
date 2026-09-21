@@ -1,0 +1,26 @@
+/*standaard styling*/
+.blogpost1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 40px;
+    border: 15px solid rgb(65, 62, 62);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* Voeg deze regels toe: */
+    text-decoration: none; /* Verwijdert de onderstreping */
+    color: inherit;        /* Zorgt dat de tekstkleur niet blauw wordt */
+    cursor: pointer;       /* Toont het handje bij hoveren */
+}
+
+@media only screen and (max-width: 480px) { /* voor mobiele apparaten max 480px */
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) { /* voor tablets minimum 481px max 1024px */
+
+}
+

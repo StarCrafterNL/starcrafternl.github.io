@@ -1,0 +1,116 @@
+/*desktop standaard styling voor portfolio pagina*/
+.avond4daagse, 
+.webportfolio, 
+.veilingklok {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    border: 5px solid rgb(65, 62, 62);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.avond4daagse .tekst, 
+.webportfolio .tekst, 
+.veilingklok .tekst {
+    flex: 1;
+}
+
+.tekst h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tekst p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+    max-width: 100%;
+}
+
+.tekst a {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* Rechterkant: afbeelding */
+.avond4daagse img, 
+.webportfolio img, 
+.veilingklok img {
+    width: 240px;
+    max-width: 35%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+
+@media only screen and (max-width: 480px) {/* voor mobiele apparaten max 480px */
+    .avond4daagse, 
+    .webportfolio, 
+    .veilingklok {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+
+    .avond4daagse .tekst, 
+    .webportfolio .tekst, 
+    .veilingklok .tekst {
+        width: 100%;
+    }
+
+    .tekst p {
+        font-size: 16px;
+    }
+
+    .avond4daagse img, 
+    .webportfolio img, 
+    .veilingklok img {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {/* voor tablets minimum 481px max 1024px */
+    .avond4daagse, 
+    .webportfolio, 
+    .veilingklok {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .avond4daagse img, 
+    .webportfolio img, 
+    .veilingklok img {
+        width: 180px;
+        max-width: 30%;
+    }
+
+    .tekst p {
+        font-size: 17px;
+    }
+}
+
+
+/* =======================================================
+   4. Desktop (1025px en breder)
+   ======================================================= */
+@media only screen and (min-width: 1025px) {
+    .avond4daagse, 
+    .webportfolio, 
+    .veilingklok {
+        flex-direction: row;
+    }
+}

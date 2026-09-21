@@ -1,4 +1,3 @@
-/* Plaats de foto aan de zijkant van de 'Over mij'-inhoud. */
 .over-mij {
 	display: flex;
 	align-items: flex-start;
@@ -9,41 +8,31 @@
 .mijn-foto {
 	width: 220px;
 	max-width: 35%;
-	height: -100px;
-	margin-left: 85%;
+	height: auto;
+	margin-left: 0;
 	object-fit: cover;
 }
 
-@media (max-width: 700px) {
-	.over-mij {
-		flex-direction: column;
-	}
-
-	.over-mij img,
-	.mijn-foto {
-		max-width: 100%;
-		margin-left: 0;
-	}
-}
 .profiel-foto {
   display: flex;
   justify-content: center;
-  margin-top: 0%;
+  align-items: center;
+  margin: 0 auto 20px;
 }
-p{
+
+p {
     font-size: 20px;
     max-width: 70%;
 }
 
 .HHS, .Hogeschool-Leiden, .AH, .Autstede {
     display: flex;
-    align-items: center;       /* Lijnt tekst en afbeelding verticaal in het midden uit */
+    align-items: center;
     justify-content: space-between;
-    gap: 30px;                 /* Ruimte tussen de tekst en de afbeelding */
+    gap: 30px;
     margin-bottom: 30px;
 }
 
-/* De tekst krijgt alle beschikbare ruimte links */
 .HHS .tekst, .Hogeschool-Leiden .tekst, .AH .tekst, .Autstede .tekst {
     flex: 1;
 }
@@ -53,19 +42,87 @@ p{
     line-height: 1.6;
     margin: 0;
 }
+
 .studie {
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
 }
+
 .vrijwilligerswerk {
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
 .footer p {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (max-width: 480px) { /* voor mobiele apparaten max 480px */
+    p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .HHS, .Hogeschool-Leiden, .AH, .Autstede {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .HHS img, .Hogeschool-Leiden img, .AH img, .Autstede img,
+    .over-mij img, .mijn-foto,
+    .studie img,
+    .vrijwilligerswerk img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 10px;
+    }
+
+    .HHS p, .Hogeschool-Leiden p, .AH p, .Autstede p {
+        font-size: 16px;
+    }
+	
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) { /* voor tablets minimum 481px max 1024px */
+    p {
+        font-size: 18px;
+        max-width: 85%;
+    }
+
+    .HHS, .Hogeschool-Leiden, .AH, .Autstede {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .HHS img, .Hogeschool-Leiden img, .AH img, .Autstede img,
+    .over-mij img, .mijn-foto {
+        width: 180px;
+        max-width: 40%;
+        height: auto;
+        margin: 0 auto;
+    }
+	.vrijwilligerswerk img {
+		width: 150%;
+		max-width: 150%;
+		height: auto;
+		margin: 0 auto 10px;
+	}
+}
+
+@media only screen and (min-width: 1025px) { /* voor desktops minimum 1025px */
+    .HHS, .Hogeschool-Leiden, .AH, .Autstede {
+        flex-direction: row;
+    }
+
+    p {
+        max-width: 70%;
+    }
 }

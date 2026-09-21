@@ -1,33 +1,104 @@
+/* ==========================================
+   1. Basisstijl (Desktop First of Standaard)
+   ========================================== */
 .container-achtergrond {
   position: relative;
   width: 100%;
-  max-width: 100%;
   height: 400px;
   background-image: url('/images/achtergrond.jpeg');
   background-size: cover;
   background-position: center;
-
+  overflow: hidden; /* Voorkomt dat elementen buiten de container steken */
 }
 
+/* Zorg dat de afbeelding in de container netjes mee schaalt */
+.foto-container img {
+  width: 200%;
+  height: auto;
+  display: block;
+}
 .achtergrond-tekst {
-  position: relative;
-  top: 60%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  color: white;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 45%;
+  color: #0d0636;
   font-size: 24px;
   font-weight: bold;
   padding: 10px 20px;
-  border-radius: 5px;
-  margin-left: 20%;
 }
 
-.foto-container {
-  position: relative;
-  top: -30%;
-  left: 80%;
-  width: 100px;
-  max-width: 100%;
-  height: auto;
+
+@media only screen and (max-width: 480px) {
+  .achtergrond-tekst {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: #0d0636;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .foto-container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px; /* Duidelijk zichtbaar op klein scherm */
+  }
 }
 
+
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .achtergrond-tekst {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    width: 50%;
+    color: #0d0636;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  .foto-container {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    width: 80px;
+  }
+}
+
+
+/* ==========================================
+   4. Desktop (1025px en breder)
+   ========================================== */
+@media only screen and (min-width: 1025px) {
+  .achtergrond-tekst {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 45%;
+    color: #0d0636;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  .foto-container {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 110px;
+  }
+}
