@@ -26,28 +26,34 @@
 <h1>contact formulier</h1>
 
 <form id="contactformulier">
-    <label for="naam"> volledige naam</label>
-    <input type="text" id="naam-form"><br>
-    <label for="email">email</label>
-    <input type="email" id="email-form"><br>
-    <label for="bericht">bericht</label>
-    <input type="text" id="bericht-form">
-    <input type="submit" value="Submit">
+    <div id="form-melding" class="melding"></div>
+
+    <label for="naam-form" > Volledige naam</label>
+    <input type="text" id="naam-form" alt="invulveld naam" placeholder="Volledige naam"><br>
+
+    <label for="email-form" >E-mail</label>
+    <input type="email" id="email-form" alt="invulveld e-mail" placeholder="E-mail"><br>
+
+    <label for="bericht-form">Bericht</label>
+    <textarea id="bericht-form" name="bericht" rows="8" alt="invulveld bericht" placeholder="Vul hier je bericht in"></textarea>
+
+    <input type="submit" value="Verzenden">
 </form>
+
+<script src="/scripts/contact.js"></script>
 
 </main>
 
 <footer class="footer">
+    <p>&copy; 2026 Vigo Wentink. Alle rechten voorbehouden.</p>
+    
+    <h2>contactformulier</h2>
+    <a href="/pages/contact.html"><img src="/images/email-envelope-white-icon.webp" width="40px"></a>
 
-<p>&copy; 2026 Vigo Wentink. Alle rechten voorbehouden.</p>
-
-<h2>Sociale media</h2>
-
-<a href="https://www.linkedin.com/in/vigowentink/" class="fa fa-linkedin" aria-label="LinkedIn"></a>
-<a href="https://www.facebook.com/VigoWentink/" class="fa fa-facebook" aria-label="Facebook"></a>
-<a href="https://www.instagram.com/vigo_wentink/" class="fa fa-instagram" aria-label="Instagram"></a>
-<a href="https://x.com/vigowentink?s=11&t=1pwHImI7WQeTVepbs_tzJQ" class="fa fa-twitter" aria-label="X"></a>
-<a href="/pages/contact.html">contact</a>
-
+    <h2>Sociale media</h2>
+    <a href="https://www.linkedin.com/in/vigowentink/" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+    <a href="https://www.facebook.com/VigoWentink/" class="fa fa-facebook" aria-label="Facebook"></a>
+    <a href="https://www.instagram.com/vigo_wentink/" class="fa fa-instagram" aria-label="Instagram"></a>
+    <a href="https://x.com/vigowentink?s=11&t=1pwHImI7WQeTVepbs_tzJQ" class="fa fa-twitter" aria-label="X"></a>
 </footer>
 </body>
