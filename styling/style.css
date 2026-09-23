@@ -55,6 +55,7 @@ main {
   margin: 0 20px;
 }
 
+
 @media only screen and (max-width: 480px) { /* voor mobiele apparaten max 480px */
   .topnav a {
   float: left;
