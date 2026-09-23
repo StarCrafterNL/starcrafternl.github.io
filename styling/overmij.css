@@ -7,7 +7,7 @@
 .over-mij img,
 .mijn-foto {
 	width: 220px;
-	max-width: 35%;
+	max-width: 100%;
 	height: auto;
 	margin-left: 0;
 	object-fit: cover;
