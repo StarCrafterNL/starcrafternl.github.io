@@ -17,6 +17,7 @@
   height: auto;
   display: block;
 }
+
 .achtergrond-tekst {
   position: absolute;
   top: 50%;
@@ -29,7 +30,134 @@
   padding: 10px 20px;
 }
 
+/* ==========================================
+   2. Over Mij Sectie (Homepage)
+   ========================================== */
+.overmij-sectie {
+  margin: 30px 0;
+}
 
+/* ==========================================
+   3. Externe Weer API Widget
+   ========================================== */
+#weer-sectie {
+  margin: 40px auto;
+  padding: 24px;
+  border: 2px solid rgb(65, 62, 62);
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.weer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.weer-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #0d0636;
+}
+
+.weer-zoekveld {
+  display: flex;
+  gap: 8px;
+}
+
+.weer-zoekveld input {
+  padding: 8px 12px;
+  border: 2px solid rgb(65, 62, 62);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.weer-zoekveld button {
+  padding: 8px 16px;
+  background-color: rgb(65, 62, 62);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.weer-zoekveld button:hover {
+  background-color: #222222;
+}
+
+.weer-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 80px;
+}
+
+.weer-icoon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.weer-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #0d0636;
+}
+
+.weer-temp {
+  margin: 4px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #111111;
+}
+
+.weer-desc {
+  margin: 0;
+  font-size: 15px;
+  color: #555555;
+  text-transform: capitalize;
+}
+
+.weer-details {
+  display: flex;
+  gap: 15px;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #777777;
+}
+
+/* Laadstatus en foutstatus meldingen */
+.weer-status {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  margin: 0;
+}
+
+.weer-status.loading {
+  background-color: #f7f7f7;
+  color: #666666;
+  font-style: italic;
+}
+
+.weer-status.error {
+  background-color: #ffe6e6;
+  color: #c90000;
+  border: 1px solid #ffcccc;
+}
+
+
+/* ==========================================
+   4. Mobiel (max 480px)
+   ========================================== */
 @media only screen and (max-width: 480px) {
   .achtergrond-tekst {
     position: absolute;
@@ -51,10 +179,31 @@
     transform: translate(-50%, -50%);
     width: 60px; /* Duidelijk zichtbaar op klein scherm */
   }
+
+  /* Responsive aanpassing voor het weer */
+  .weer-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .weer-zoekveld {
+    width: 100%;
+  }
+
+  .weer-zoekveld input {
+    flex: 1;
+  }
+
+  .weer-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 
-
+/* ==========================================
+   5. Tablet (481px tot 1024px)
+   ========================================== */
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .achtergrond-tekst {
     position: absolute;
@@ -79,7 +228,7 @@
 
 
 /* ==========================================
-   4. Desktop (1025px en breder)
+   6. Desktop (1025px en breder)
    ========================================== */
 @media only screen and (min-width: 1025px) {
   .achtergrond-tekst {

@@ -2,8 +2,8 @@
 const projecten = [
     {
         id: "autstede-demo",
-        titel: "Autstede Formulier Demo",
-        beschrijving: "Dit is een demo van een formulier dat ik heb gemaakt voor Autstede. Deze demo laat zien dat de gegevens van het formulier automatisch in een pdf opgeslagen kunnen worden.",
+        titel: "Formulier naar pdf Demo",
+        beschrijving: "Dit is een demo van een formulier naar pdf webapp die ik heb gemaakt voor Autstede. Deze demo laat zien dat de gegevens van het formulier automatisch in een pdf opgeslagen kunnen worden.",
         githubUrl: "https://github.com/StarCrafterNL/autstede-project",
         afbeelding: "/images/overmij/autstede.png",
         categorie: "Individueel",

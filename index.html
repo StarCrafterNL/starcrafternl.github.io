@@ -4,12 +4,11 @@
     <link rel="stylesheet" href="/styling/style.css">
     <link rel="stylesheet" href="/styling/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta
-    name="keywords"
-    content="Vigo Wentink, portfolio, webdevelopment"
-    />
+    <meta name="keywords" content="Vigo Wentink, portfolio, webdevelopment" />
     <title>Vigo Wentink</title>
 </head>
+
+<body>
 
 <header>
     <nav class="topnav" id="topnav">
@@ -21,34 +20,45 @@
         </ul>
     </nav>
 
-<div class="container-achtergrond">
-    <div class="achtergrond-tekst">
-        <h1>Welkom op mijn website</h1>
-        <p>Hier vindt u informatie over Vigo Wentink <br>
-        op deze website staat informatie over mijn, mijn portfolio en mijn blog.</p> 
+    <div class="container-achtergrond">
+        <div class="achtergrond-tekst">
+            <h1>Welkom op mijn website</h1>
+            <p>Hier vindt u informatie over Vigo Wentink <br>
+            op deze website staat informatie over mijn, mijn portfolio en mijn blog.</p> 
+        </div>
+        <div class="foto-container">
+            <img src="/images/Vigo Wentink.jpeg" alt="Mijn foto" class="mijn-foto" width="300" height="400">
+        </div>
     </div>
-    <div class="foto-container">
-        <img src="/images/Vigo Wentink.jpeg" alt="Mijn foto" class="mijn-foto" width="300" height="400"><!--vervang foto door een betere foto van jezelf-->
-    </div>
-</div>
-
 </header>
 
-
 <main>
-<body>
-<h2>Over mij</h2>
-<p>Mijn naam is Vigo Wentink, ik ben 23 jaar oud, ik woon in Den Haag en ik studeer aan de Haagsche Hogeschool.</p>
-<p> benieuwd wie ik ben druk op onderstaande knop voor meer informatie.</p>
-<button class="button" onclick="window.location.href='/pages/overmij.html'">Over mij</button>
-</main>
+    <section class="overmij-sectie">
+        <h2>Over mij</h2>
+        <p>Mijn naam is Vigo Wentink, ik ben 23 jaar oud, ik woon in Den Haag en ik studeer aan de Haagsche Hogeschool.</p>
+        <p>Benieuwd wie ik ben? Zie op de pagina 'Over mij' voor meer informatie.</p>
 
+    </section>
+
+    <!-- Externe Publieke Weer API Sectie -->
+    <section id="weer-sectie" aria-live="polite">
+        <div class="weer-header">
+            <h2>Actueel Weerbericht</h2>
+            <div class="weer-zoekveld">
+                <input type="text" id="weer-stad-input" value="Den Haag" placeholder="Voer een stad in...">
+                <button id="weer-zoek-btn" type="button">Bekijk</button>
+            </div>
+        </div>
+        
+        <div id="weer-card" class="weer-card"></div>
+    </section>
+</main>
 
 <footer class="footer">
     <p>&copy; 2026 Vigo Wentink. Alle rechten voorbehouden.</p>
     
     <h2>contactformulier</h2>
-    <a href="/pages/contact.html"><img src="/images/email-envelope-white-icon.webp" width="40px"></a>
+    <a href="/pages/contact.html"><img src="/images/email-envelope-white-icon.webp" width="40px" alt="E-mail"></a>
 
     <h2>Sociale media</h2>
     <a href="https://www.linkedin.com/in/vigowentink/" class="fa fa-linkedin" aria-label="LinkedIn"></a>
@@ -57,5 +67,8 @@
     <a href="https://x.com/vigowentink?s=11&t=1pwHImI7WQeTVepbs_tzJQ" class="fa fa-twitter" aria-label="X"></a>
 </footer>
 
+<!-- Hier wordt het script ingeladen -->
+<script src="/scripts/weer.js"></script>
 
+</body>
 </html>
