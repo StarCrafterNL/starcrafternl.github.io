@@ -1,116 +1,198 @@
-/*desktop standaard styling voor portfolio pagina*/
-.avond4daagse, 
-.webportfolio, 
-.veilingklok {
+/* =======================================================
+   1. Filter- en sorteerbalk (Controls)
+   ======================================================= */
+.portfolio-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 25px 0 35px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.filter-knoppen {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.filter-btn.active {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Sorteer-dropdown wrapper */
+.sorteer-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.sorteer-wrapper label {
+    cursor: pointer;
+}
+
+.sorteer-wrapper select {
+    padding: 8px 14px;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.sorteer-wrapper select:focus {
+    border-color: #007acc;
+}
+
+/* =======================================================
+   2. Projecten Container & Project Kaart
+   ======================================================= */
+#projecten-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.portfolio-project {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    margin-bottom: 40px;
-    border: 5px solid rgb(65, 62, 62);
-    border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
+    border: 2px solid #333333;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-
-.avond4daagse .tekst, 
-.webportfolio .tekst, 
-.veilingklok .tekst {
+/* Linkerzijde: Tekst */
+.portfolio-project .tekst {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.tekst h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.portfolio-project h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333333;
 }
 
-.tekst p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0 0 12px 0;
-    max-width: 100%;
-}
-
-.tekst a {
-    display: inline-block;
+.portfolio-project p {
+    margin: 0;
     font-size: 16px;
-    text-decoration: underline;
-    color: inherit;
+    line-height: 1.6;
+    color: #555555;
 }
 
-/* Rechterkant: afbeelding */
-.avond4daagse img, 
-.webportfolio img, 
-.veilingklok img {
-    width: 240px;
-    max-width: 35%;
+.portfolio-project a {
+    align-self: flex-start;
+    font-size: 15px;
+    color: #007acc;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.portfolio-project a:hover {
+    color: #005999;
+}
+
+/* Rechterzijde: Afbeelding */
+.portfolio-project img {
+    width: auto;
+    max-width: 40%;
     height: auto;
-    object-fit: cover;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
     flex-shrink: 0;
 }
 
-
-
-@media only screen and (max-width: 480px) {/* voor mobiele apparaten max 480px */
-    .avond4daagse, 
-    .webportfolio, 
-    .veilingklok {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        margin-bottom: 30px;
-    }
-
-    .avond4daagse .tekst, 
-    .webportfolio .tekst, 
-    .veilingklok .tekst {
-        width: 100%;
-    }
-
-    .tekst p {
-        font-size: 16px;
-    }
-
-    .avond4daagse img, 
-    .webportfolio img, 
-    .veilingklok img {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 10px;
-    }
-}
-
-
-
-@media only screen and (min-width: 481px) and (max-width: 1024px) {/* voor tablets minimum 481px max 1024px */
-    .avond4daagse, 
-    .webportfolio, 
-    .veilingklok {
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    .avond4daagse img, 
-    .webportfolio img, 
-    .veilingklok img {
-        width: 180px;
-        max-width: 30%;
-    }
-
-    .tekst p {
-        font-size: 17px;
-    }
-}
-
-
 /* =======================================================
-   4. Desktop (1025px en breder)
+   3. Responsive Design
    ======================================================= */
-@media only screen and (min-width: 1025px) {
-    .avond4daagse, 
-    .webportfolio, 
-    .veilingklok {
-        flex-direction: row;
+
+/* Mobiel (max 600px) */
+@media only screen and (max-width: 600px) {
+    .portfolio-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .filter-knoppen {
+        width: 100%;
+    }
+
+    .filter-btn {
+        flex: 1;
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .sorteer-wrapper {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .sorteer-wrapper select {
+        flex: 1;
+    }
+
+    .portfolio-project {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .portfolio-project img {
+        max-width: 100%;
+        max-height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Tablets (601px tot 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .portfolio-project {
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .portfolio-project img {
+        max-width: 35%;
+        max-height: 180px;
     }
 }
