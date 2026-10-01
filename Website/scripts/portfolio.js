@@ -5,7 +5,7 @@ const projecten = [
         titel: "Formulier naar pdf Demo",
         beschrijving: "Dit is een demo van een formulier naar pdf webapp die ik heb gemaakt voor Autstede. Deze demo laat zien dat de gegevens van het formulier automatisch in een pdf opgeslagen kunnen worden.",
         githubUrl: "https://github.com/StarCrafterNL/autstede-project",
-        afbeelding: "/images/overmij/autstede.png",
+        afbeelding: "../images/overmij/autstede.png",
         categorie: "Individueel",
         datum: "2026-09-28"
     },
@@ -15,7 +15,7 @@ const projecten = [
         titel: "Webapplicatie Avond4daagse",
         beschrijving: "Op het moment mee aan de slag. Dit is casus die ik gekregen heb om in groepsverband te werken en de leeruitkomste te behalen van het derde semester.",
         githubUrl: "https://github.com/StarCrafterNL/Avond4-DaagseGroep3",
-        afbeelding: "/images/portfolio/avond 4 daagse.png",
+        afbeelding: "../images/portfolio/avond 4 daagse.png",
         categorie: "Groepsproject",
         datum: "2026-09-02"
     },
@@ -24,7 +24,7 @@ const projecten = [
         titel: "WebPortfolio",
         beschrijving: "Dit is mijn webportfolio, waarin ik mijn projecten en vaardigheden presenteer. De website is gebouwd met HTML en CSS dit zal later worden aangevuld met JavaScript. Deze website is nog in ontwikkeling en is de vorm waarmee ik de leeruitkomst van WPFW zal aantonen.",
         githubUrl: "https://github.com/StarCrafterNL/starcrafternl.github.io",
-        afbeelding: "/images/portfolio/webportfolio.png",
+        afbeelding: "../images/portfolio/webportfolio.png",
         categorie: "Individueel",
         datum: "2026-09-01"
     },
@@ -33,7 +33,7 @@ const projecten = [
         titel: "Digitale veilingklok RoyalFlora",
         beschrijving: "Voor de eerste keer dat ik aan het 3de semester begon heb ik samen met mijn projectgroep een casus gekregen om een digitale veiling te maken voor RoyalFlora. Hierbij is het grootste onderdeel waar ik aan heb gewerkt de veiling pagina met de Veilingklok. Hierin heb ik de veilingklok gemaakt die de tijd van de veiling laat zien en de tijd die over is voor het bieden.",
         githubUrl: "https://github.com/Smeckle-git/RoyalFloraHolland",
-        afbeelding: "/images/portfolio/Royal-FloraHolland.png",
+        afbeelding: "../images/portfolio/Royal-FloraHolland.png",
         categorie: "Groepsproject",
         datum: "2023-11-10"
     }
