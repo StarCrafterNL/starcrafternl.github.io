@@ -56,3 +56,36 @@ input[type=submit]:hover {
   color: #155724;
   border: 1px solid #c3e6cb;
 }
+
+.input-ongeldig {
+  border: 2px solid #ff1900 !important;
+  background-color: #fdf2f2;
+}
+
+
+.veld-fout {
+  display: block;
+  color: #ff1900;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.melding.fout {
+  color: #c0392b;
+  background-color: #fde8e8;
+  border: 1px solid #e74c3c;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.melding.succes {
+  color: #2de67a;
+  background-color: #eafaf1;
+  border: 1px solid #2ecc71;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
