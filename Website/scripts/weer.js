@@ -1,6 +1,4 @@
-/* =======================================================
-   Externe Publieke API: Weerbericht (Weerlive.nl)
-   ======================================================= */
+
 
 const WEER_API_KEY = "6e8e9f4515";
 
@@ -16,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // [x] Laadstatus tonen
+    //  Laadstatus tonen
     const toonWeerLaden = () => {
         weerCard.innerHTML = "";
         const laadTekst = document.createElement("p");
@@ -25,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         weerCard.appendChild(laadTekst);
     };
 
-    // [x] Foutstatus netjes afhandelen en tonen
+    //  Foutstatus netjes afhandelen en tonen
     const toonWeerFout = (bericht) => {
         weerCard.innerHTML = "";
         const foutBox = document.createElement("div");
@@ -41,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         weerCard.appendChild(foutBox);
     };
 
-    // [x] Opgehaalde data dynamisch renderen met DOM-methoden
+    //  Opgehaalde data dynamisch renderen met DOM-methoden
     const renderWeerData = (data) => {
         console.log("Data wordt gerenderd:", data);
         weerCard.innerHTML = ""; // Container leegmaken
@@ -95,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         weerCard.append(icoon, infoDiv);
     };
 
-    // [x] Externe JSON-data ophalen met behulp van Fetch API
+    // Externe JSON-data ophalen met behulp van Fetch API
     const haalWeerOp = async (stad) => {
         toonWeerLaden();
 
@@ -122,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // [x] Event listeners koppelen
+    //  Event listeners koppelen
     zoekKnop.addEventListener("click", () => {
         const stad = stadInput.value.trim();
         if (stad) haalWeerOp(stad);
