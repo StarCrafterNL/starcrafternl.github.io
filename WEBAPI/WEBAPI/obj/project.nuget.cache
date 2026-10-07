@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gu59LXnqF/Q=",
+  "dgSpecHash": "RT6EdtgoYg8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vigo_\\OneDrive\\Documenten\\repositories\\WPFW project\\starcrafternl.github.io\\WEBAPI\\WEBAPI\\WEBAPI.csproj",
+  "projectFilePath": "c:\\Users\\vigo_\\OneDrive\\Documenten\\repositories\\starcrafternl.github.io\\WEBAPI\\WEBAPI\\WEBAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
