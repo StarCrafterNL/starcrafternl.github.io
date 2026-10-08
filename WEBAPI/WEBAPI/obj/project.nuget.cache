@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t/2eWULHE34=",
+  "dgSpecHash": "F2u+KwYw4E8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vigo_\\OneDrive\\Documenten\\repositories\\starcrafternl.github.io\\WEBAPI\\WEBAPI\\WEBAPI.csproj",
+  "projectFilePath": "c:\\Users\\vigo_\\OneDrive\\Documenten\\repositories\\starcrafternl.github.io\\WEBAPI\\WEBAPI\\WEBAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vigo_\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",

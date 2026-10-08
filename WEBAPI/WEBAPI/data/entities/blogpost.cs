@@ -1,12 +1,9 @@
-namespace WEBAPI.Data.Entities
+namespace WEBAPI.Data.Entities;
+
+public class BlogPost
 {
-    public class BlogPost
-    {
-        public int Id { get; set; }
-        public string Titel { get; set; } = string.Empty;
-        public string Beschrijving { get; set; } = string.Empty;
-        public string Categorie { get; set; } = string.Empty;
-        public string GitHubUrl { get; set; } = string.Empty;
-        public DateTime Datum { get; set; }
-    }
+    public int Id { get; set; }
+    public string Titel { get; set; } = string.Empty;
+    public string Inhoud { get; set; } = string.Empty;
+    public DateTime Publicatiedatum { get; set; }
 }
