@@ -1,5 +1,3 @@
-
-
 const WEER_API_KEY = "6e8e9f4515";
 
 // Wacht tot de hele DOM is opgebouwd voordat we elementen selecteren
