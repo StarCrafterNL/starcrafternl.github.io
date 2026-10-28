@@ -1,19 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using WEBAPI.Data;
+using WEBAPI.Features.Projects;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. DbContext registreren met de SQL Server connection string via Dependency Injection
 builder.Services.AddDbContext<PortfolioDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -22,8 +20,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Hello World endpoint
-app.MapGet("/", () => "Hello World!")
-    .WithName("GetHelloWorld");
+
+app.MapProjectEndpoints();
 
 app.Run();

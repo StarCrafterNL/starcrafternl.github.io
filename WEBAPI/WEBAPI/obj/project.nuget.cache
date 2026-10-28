@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bap9o5d3XDI=",
+  "dgSpecHash": "Ig6sRhEqqRs=",
   "success": true,
   "projectFilePath": "C:\\Users\\vigo_\\OneDrive\\Documenten\\repositories\\starcrafternl.github.io\\WEBAPI\\WEBAPI\\WEBAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vigo_\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\10.0.14\\microsoft.aspnetcore.identity.entityframeworkcore.10.0.14.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
@@ -28,6 +29,7 @@
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver.design\\1.1.6\\microsoft.entityframeworkcore.sqlserver.design.1.1.6.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.14\\microsoft.extensions.dependencymodel.10.0.14.nupkg.sha512",
+    "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.extensions.validation\\10.0.14\\microsoft.extensions.validation.10.0.14.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.identity.client\\4.84.2\\microsoft.identity.client.4.84.2.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.identity.client.broker\\4.84.2\\microsoft.identity.client.broker.4.84.2.nupkg.sha512",
     "C:\\Users\\vigo_\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\4.78.0\\microsoft.identity.client.extensions.msal.4.78.0.nupkg.sha512",
@@ -64,6 +66,18 @@
     "C:\\Users\\vigo_\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.11\\system.security.cryptography.protecteddata.9.0.11.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.Extensions.Validation will not be pruned. This package is automatically available and does not need to be referenced explicitly. Remove the PackageReference item.",
+      "projectPath": "C:\\Users\\vigo_\\OneDrive\\Documenten\\repositories\\starcrafternl.github.io\\WEBAPI\\WEBAPI\\WEBAPI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\vigo_\\OneDrive\\Documenten\\repositories\\starcrafternl.github.io\\WEBAPI\\WEBAPI\\WEBAPI.csproj",
+      "libraryId": "Microsoft.Extensions.Validation",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
     {
       "code": "NU1902",
       "level": "Warning",

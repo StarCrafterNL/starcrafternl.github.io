@@ -1,3 +1,6 @@
 {
-    "dotnet.defaultSolution": "WEBAPI.sln"
+    "dotnet.defaultSolution": "WEBAPI.sln",
+    "dataworkspace.excludedProjects": [
+        "PortfolioDb/PortfolioDb.sqlproj"
+    ]
 }
