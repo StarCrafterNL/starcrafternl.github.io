@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using WEBAPI.Data;
 using WEBAPI.Features.Projects;
 using WEBAPI.Features.Blogposts;
+using WEBAPI.Features.Auth;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,6 +56,8 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapRegistreerEndpoint();
+app.MapLoginEndpoint();
 app.MapProjectEndpoints();
 app.MapBlogpostEndpoints();
 

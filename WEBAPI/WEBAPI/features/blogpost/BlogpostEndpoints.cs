@@ -10,7 +10,7 @@ public static class BlogpostEndpoints
     {
         var group = routes.MapGroup("/api/blogposts").WithTags("Blogposts");
 
-        // 1. GET alle blogposts
+        // 1. GET alle blogposts (publiek)
         group.MapGet("/", async (PortfolioDBContext db) =>
         {
             var blogposts = await db.BlogPosts  
@@ -26,7 +26,7 @@ public static class BlogpostEndpoints
             return Results.Ok(blogposts);
         });
 
-        // 2. GET één blogpost op Id
+        // 2. GET één blogpost op Id (publiek)
         group.MapGet("/{id:int}", async (int id, PortfolioDBContext db) =>
         {
             var blogpost = await db.BlogPosts.FindAsync(id);
@@ -47,7 +47,7 @@ public static class BlogpostEndpoints
             return Results.Ok(dto);
         });
 
-        // 3. POST nieuwe blogpost
+        // 3. POST nieuwe blogpost (alleen Editor of Admin)
         group.MapPost("/", async (CreateBlogpostDto dto, PortfolioDBContext db) =>
         {
             var blogpost = new BlogPost
@@ -69,9 +69,10 @@ public static class BlogpostEndpoints
             };
 
             return Results.Created($"/api/blogposts/{blogpost.Id}", resultDto);
-        });
+        })
+        .RequireAuthorization(policy => policy.RequireRole("Editor", "Admin"));
 
-        // 4. PUT blogpost op Id
+        // 4. PUT blogpost op Id (alleen Editor of Admin)
         group.MapPut("/{id:int}", async (int id, UpdateBlogpostDto dto, PortfolioDBContext db) =>
         {
             var blogpost = await db.BlogPosts.FindAsync(id);
@@ -88,9 +89,10 @@ public static class BlogpostEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .RequireAuthorization(policy => policy.RequireRole("Editor", "Admin"));
 
-        // 5. DELETE blogpost op Id
+        // 5. DELETE blogpost op Id (alleen Editor of Admin)
         group.MapDelete("/{id:int}", async (int id, PortfolioDBContext db) =>
         {
             var blogpost = await db.BlogPosts.FindAsync(id);
@@ -104,6 +106,7 @@ public static class BlogpostEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .RequireAuthorization(policy => policy.RequireRole("Editor", "Admin"));
     }
 }

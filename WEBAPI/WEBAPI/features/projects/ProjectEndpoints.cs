@@ -10,7 +10,7 @@ public static class ProjectEndpoints
     {
         var group = routes.MapGroup("/api/projects").WithTags("Projects");
 
-        // 1. GET alle projecten
+        // 1. GET alle projecten (publiek)
         group.MapGet("/", async (PortfolioDBContext db) =>
         {
             var projects = await db.Projects
@@ -28,7 +28,7 @@ public static class ProjectEndpoints
             return Results.Ok(projects);
         });
 
-        // 2. GET één project op Id
+        // 2. GET één project op Id (publiek)
         group.MapGet("/{id:int}", async (int id, PortfolioDBContext db) =>
         {
             var project = await db.Projects.FindAsync(id);
@@ -51,7 +51,7 @@ public static class ProjectEndpoints
             return Results.Ok(dto);
         });
 
-        // 3. POST nieuw project (aanmaken)
+        // 3. POST nieuw project (alleen Editor of Admin)
         group.MapPost("/", async (CreateProjectDto dto, PortfolioDBContext db) =>
         {
             var project = db.Projects.Add(new()
@@ -76,9 +76,10 @@ public static class ProjectEndpoints
             };
 
             return Results.Created($"/api/projects/{project.Id}", resultDto);
-        });
+        })
+        .RequireAuthorization(policy => policy.RequireRole("Editor", "Admin"));
 
-        // 4. PUT project op Id (wijzigen)
+        // 4. PUT project op Id (alleen Editor of Admin)
         group.MapPut("/{id:int}", async (int id, UpdateProjectDto dto, PortfolioDBContext db) =>
         {
             var project = await db.Projects.FindAsync(id);
@@ -97,9 +98,10 @@ public static class ProjectEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .RequireAuthorization(policy => policy.RequireRole("Editor", "Admin"));
 
-        // 5. DELETE project op Id (verwijderen)
+        // 5. DELETE project op Id (alleen Editor of Admin)
         group.MapDelete("/{id:int}", async (int id, PortfolioDBContext db) =>
         {
             var project = await db.Projects.FindAsync(id);
@@ -113,6 +115,7 @@ public static class ProjectEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
-        });
+        })
+        .RequireAuthorization(policy => policy.RequireRole("Editor", "Admin"));
     }
 }
